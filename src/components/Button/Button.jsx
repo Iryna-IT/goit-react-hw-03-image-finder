@@ -4,11 +4,6 @@ import PropTypes from 'prop-types';
 import styles from './Button.module.css';
 
 class Button extends Component {
-  // static defaultProps = {
-  //   contactsListToShow: [],
-  //   filter: '',
-  // };
-
   static propTypes = {
     onClick: PropTypes.func.isRequired,
   };

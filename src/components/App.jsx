@@ -55,7 +55,7 @@ class App extends Component {
         <Searchbar onSubmit={this.onChangeQuery} />
         <ImageGallery gallery={gallery} searchQuery={searchQuery} />
         {isLoading && <Load />}
-        {gallery.length > 0 && !isLoading && (
+        {gallery.length > 11 && !isLoading && (
           <Button onClick={this.fetchImageGallery} />
         )}
       </div>
