@@ -12,24 +12,20 @@ class ImageGallery extends Component {
   };
 
   render() {
-    const { gallery, searchQuery } = this.props;
-    if (searchQuery !== '' && gallery.length === 0) {
-      return <div>Nothing found</div>;
-    } else {
-      return (
-        <ul className={styles.ImageGallery}>
-          {gallery.map(item => (
-            <ImageGalleryItem
-              key={item.id}
-              id={item.id}
-              webformatURL={item.webformatURL}
-              largeImageURL={item.largeImageURL}
-              tags={item.tags}
-            />
-          ))}
-        </ul>
-      );
-    }
+    const { gallery } = this.props;
+    return (
+      <ul className={styles.ImageGallery}>
+        {gallery.map(item => (
+          <ImageGalleryItem
+            key={item.id}
+            id={item.id}
+            webformatURL={item.webformatURL}
+            largeImageURL={item.largeImageURL}
+            tags={item.tags}
+          />
+        ))}
+      </ul>
+    );
   }
 }
 

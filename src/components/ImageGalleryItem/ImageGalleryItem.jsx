@@ -34,7 +34,11 @@ class ImageGalleryItem extends Component {
     const { showModal } = this.state;
     this.setState.largeImageURL = largeImageURL;
     return (
-      <li key={id} className={styles.largeImageURL} onClick={this.toggleModal}>
+      <li
+        key={id}
+        className={styles.ImageGalleryItem}
+        onClick={this.toggleModal}
+      >
         <img
           src={webformatURL}
           alt={tags}
